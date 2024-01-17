@@ -25,6 +25,7 @@ export default function About() {
   const items = values.map((value, index) => (
     <Checkbox
       size="xs"
+      color="#0076d5"
       mt="xs"
       ml={33}
       label={value.label}
@@ -43,6 +44,7 @@ export default function About() {
         <Group justify="center">
           <Checkbox
             size="xs"
+            color="#0076d5"
             defaultChecked
             label="위 사항을 모두 확인하였으며, 이에 동의합니다."
           />
@@ -54,12 +56,14 @@ export default function About() {
         <Stack>
           <Checkbox
             size="xs"
+            color="#0076d5"
             checked={false}
             onChange={() => {}}
             label="Default checkbox"
           />
           <Checkbox
             size="xs"
+            color="#0076d5"
             checked={false}
             onChange={() => {}}
             indeterminate
@@ -67,6 +71,7 @@ export default function About() {
           />
           <Checkbox
             size="xs"
+            color="#0076d5"
             checked
             onChange={() => {}}
             label="Checked checkbox"
@@ -75,12 +80,14 @@ export default function About() {
           <Checkbox size="xs" disabled label="Disabled checkbox" />
           <Checkbox
             size="xs"
+            color="#0076d5"
             disabled
             indeterminate
             label="Disabled indeterminate checkbox"
           />
           <Checkbox
             size="xs"
+            color="#0076d5"
             disabled
             checked
             onChange={() => {}}
@@ -93,6 +100,7 @@ export default function About() {
       <Safari>
         <Checkbox
           size="xs"
+          color="#0076d5"
           checked={allChecked}
           indeterminate={indeterminate}
           label="모든 약관에 동의합니다."
@@ -109,6 +117,7 @@ export default function About() {
       <Safari>
         <Checkbox
           size="xs"
+          color="#0076d5"
           label={
             <>
               가비아 이용 약관에 동의합니다.
