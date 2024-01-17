@@ -1,0 +1,118 @@
+//* Button
+.mantine-Button-root {
+  font-weight: 400;
+  border-radius: 36px;
+  border-color: #888;
+  min-width: 150px;
+  color: #333;
+  padding: 0 20px;
+  background-color: #fff;
+  transition:
+    color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: #888;
+    color: #fff;
+  }
+
+  &[data-loading] {
+    background-color: #888;
+  }
+
+  //* Size Variant
+  &[data-size="sm"] {
+    min-width: 82px;
+    height: 32px;
+  }
+  &[data-size="lg"] {
+    min-width: 200px;
+    padding: 0 30px;
+  }
+
+  //* Color Variant
+  &[data-variant="light"] {
+    &:hover {
+      background-color: #0076d5;
+      color: #fff;
+    }
+    &[data-loading] {
+      background: #0076d5;
+    }
+  }
+  &[data-variant="primary"] {
+    border-color: #0076d5;
+    color: #0076d5;
+    &:hover {
+      background-color: #0076d5;
+      color: #fff;
+    }
+    &[data-loading] {
+      background: #0076d5;
+    }
+  }
+  &[data-variant="danger"] {
+    border-color: #d53012;
+    color: #d53012;
+    &:hover {
+      background-color: #d53012;
+      color: #fff;
+    }
+    &[data-loading] {
+      background: #d53012;
+    }
+  }
+
+  //* Disabled
+  &[data-disabled] {
+    color: #d3d3d3;
+    border-color: #ccc;
+    background-color: #ededed;
+    &:hover {
+      color: #d3d3d3;
+      border-color: #ccc;
+      background-color: #ededed;
+    }
+  }
+
+  //* 아이콘 여백 조정
+  .mantine-Button-section[data-position="left"] {
+    margin-right: 8px;
+  }
+  .mantine-Button-section[data-position="right"] {
+    margin-left: 8px;
+  }
+
+  //* 라벨 여백 추가(폰트 위, 아래 여백의 공간이 달라서 조정해 줌)
+  .mantine-Button-label {
+    padding-top: 1px;
+  }
+
+  //* Active Mentine CSS 초기화(버튼을 누를 때마다 움찔 거리는 애니메이션 삭제)
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+//* ActionIcon
+.mantine-ActionIcon-root {
+  color: #666;
+  border-color: #ccc;
+  border-radius: 50%;
+  transition:
+    color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.1s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    border-color: #0076d5;
+    background-color: #0076d5;
+  }
+
+  //* Active Mentine CSS 초기화(버튼을 누를 때마다 움찔 거리는 애니메이션 삭제)
+  &:active {
+    transform: translateY(0);
+  }
+}

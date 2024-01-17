@@ -1,0 +1,16 @@
+//* 체크박스와 텍스트 여백 조정
+.mantine-Checkbox-root {
+  .mantine-Checkbox-label {
+    padding-top: 3px;
+    padding-left: 6px;
+    line-height: 1;
+  }
+  .mantine-Checkbox-input {
+    border-radius: 0;
+  }
+  .mantine-Checkbox-labelWrapper {
+    .mantine-Checkbox-label {
+      color: #666;
+    }
+  }
+}

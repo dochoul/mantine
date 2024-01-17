@@ -1,60 +1,53 @@
-import { useState } from 'react';
-import { Box, Button, Code, Group, Modal, Popover, Text, Tooltip, rem } from '@mantine/core';
-import { IconPhoto, IconDownload, IconArrowRight } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
-import { formatDate, isEmail } from 'Gutils';
-import classes from './Home.module.scss';
-import Safari from '../components/Safari';
+import { useEffect, useState } from "react";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Code,
+  Group,
+  Modal,
+  Popover,
+  Stack,
+  Text,
+  Tooltip,
+  rem,
+} from "@mantine/core";
+import { IconPhoto, IconDownload, IconArrowRight } from "@tabler/icons-react";
+import { useDisclosure } from "@mantine/hooks";
+import { formatDate, isEmail } from "Gutils";
+import Safari from "../components/Safari";
 
 export default function HomePage() {
   const [opened, { open, close }] = useDisclosure(false);
-  const [popoverOpened, setOpened] = useState(false);
-  const date = new Date();
+  const [today, setToday] = useState("");
+  const [checked, setChecked] = useState(false);
 
-  console.log(formatDate({ format: 'yyyy-mm-dd' }));
+  useEffect(() => {
+    setToday(formatDate({ format: "yyyy-mm-dd" }));
+  }, []);
 
-  console.log(isEmail('111@naver.com'));
+  console.log(isEmail("111@naver.com"));
 
   return (
-    <div className={classes.home}>
-      <Code>React.createElement()</Code>
+    <div>
+      <h2 className="anchor">Gutils</h2>
+      <Safari>
+        오늘 날짜: <span style={{ color: "red" }}>{today}</span>
+      </Safari>
 
-      <h2 className="anchor">Example</h2>
-      <div className="gt-panel">
-        <div className="gt-panel-header">
-          <div className="circles">
-            <span className="circle circle-red" />
-            <span className="circle circle-yellow" />
-            <span className="circle circle-green" />
-          </div>
-        </div>
-        <div className="gt-panel-body gt-center">
-          <Button onClick={open}>모달</Button>
-        </div>
-      </div>
-
-      <Box>
-        <Modal
-          opened={opened}
-          onClose={close}
-          title="계좌번호 발송"
-          size={rem(530)}
-          shadow="xs"
-          centered
-        >
-          <Text pb={rem(40)}>계좌 번호 발송</Text>
-        </Modal>
-      </Box>
-
-      <Tooltip label="Tooltip">
-        <Button variant="outline" color="gray" size="xl">
-          With tooltip
-        </Button>
-      </Tooltip>
-
-      <Tooltip label="Default arrow">
-        <Button variant="outline">Default arrow</Button>
-      </Tooltip>
+      <h2 className="anchor">Tooltip</h2>
+      <Safari>
+        <Group>
+          <Tooltip label="Default arrow">
+            <Button variant="outline">Default arrow</Button>
+          </Tooltip>
+          <Tooltip label="Tooltip">
+            <Button variant="outline" color="gray" size="xl">
+              With tooltip
+            </Button>
+          </Tooltip>
+        </Group>
+      </Safari>
 
       <h2 className="anchor">Button</h2>
       <Safari>

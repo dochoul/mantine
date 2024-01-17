@@ -19,7 +19,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/core": "7.4.0",
+    "@mantine/core": "^7.4.0",
     "@mantine/hooks": "7.4.0",
     "@tabler/icons-react": "^2.45.0",
     "gabia-design-system": "^0.2.2",

@@ -5,7 +5,7 @@ import { randomId, useListState } from "@mantine/hooks";
 
 const initialValues = [
   {
-    label: "가비아 이용 약관에 동의합니다.  ",
+    label: "가비아 이용 약관에 동의합니다.",
     checked: false,
     key: randomId(),
   },
@@ -17,8 +17,6 @@ const initialValues = [
 ];
 
 export default function About() {
-  const [checked, setChecked] = useState(false);
-
   const [values, handlers] = useListState(initialValues);
 
   const allChecked = values.every((value) => value.checked);
@@ -26,6 +24,7 @@ export default function About() {
 
   const items = values.map((value, index) => (
     <Checkbox
+      size="xs"
       mt="xs"
       ml={33}
       label={value.label}
@@ -42,7 +41,11 @@ export default function About() {
       <h2 className="anchor">Checkbox</h2>
       <Safari>
         <Group justify="center">
-          <Checkbox defaultChecked label="체크박스입니다" />
+          <Checkbox
+            size="xs"
+            defaultChecked
+            label="위 사항을 모두 확인하였으며, 이에 동의합니다."
+          />
         </Group>
       </Safari>
 
@@ -50,25 +53,34 @@ export default function About() {
       <Safari>
         <Stack>
           <Checkbox
+            size="xs"
             checked={false}
             onChange={() => {}}
             label="Default checkbox"
           />
           <Checkbox
+            size="xs"
             checked={false}
             onChange={() => {}}
             indeterminate
             label="Indeterminate checkbox"
           />
-          <Checkbox checked onChange={() => {}} label="Checked checkbox" />
-
-          <Checkbox disabled label="Disabled checkbox" />
           <Checkbox
+            size="xs"
+            checked
+            onChange={() => {}}
+            label="Checked checkbox"
+          />
+
+          <Checkbox size="xs" disabled label="Disabled checkbox" />
+          <Checkbox
+            size="xs"
             disabled
             indeterminate
             label="Disabled indeterminate checkbox"
           />
           <Checkbox
+            size="xs"
             disabled
             checked
             onChange={() => {}}
@@ -80,6 +92,7 @@ export default function About() {
       <h2 className="anchor">Indeterminate States</h2>
       <Safari>
         <Checkbox
+          size="xs"
           checked={allChecked}
           indeterminate={indeterminate}
           label="모든 약관에 동의합니다."
@@ -95,6 +108,7 @@ export default function About() {
       <h2 className="anchor">Label with link</h2>
       <Safari>
         <Checkbox
+          size="xs"
           label={
             <>
               가비아 이용 약관에 동의합니다.
