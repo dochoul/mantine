@@ -11,20 +11,74 @@ export default function ModalPage() {
   const [opened6, { open: open6, close: close6 }] = useDisclosure(false);
   const [opened7, { open: open7, close: close7 }] = useDisclosure(false);
 
+  const [centered, { open: open8, close: close8 }] = useDisclosure(false);
+
+  const [removeHeader, { open: open9, close: close9 }] = useDisclosure(false);
+
+  const [fullscreen, { open: open10, close: close10 }] = useDisclosure(false);
+  const [withScroll, { open: open11, close: close11 }] = useDisclosure(false);
+
+  const content = Array(100)
+    .fill(0)
+    .map((_, index) => <p key={index}>Modal with scroll</p>);
+
   return (
     <div>
       <h2 className="anchor">Usage</h2>
       <Safari>
         <Group justify="center">
           <Button onClick={open1}>알림1</Button>
-          <Button onClick={open2}>알림2</Button>
-          <Button onClick={open3}>알림3</Button>
+          <Button onClick={open2} variant="danger">
+            알림2
+          </Button>
+          <Button onClick={open3} variant="primary">
+            알림3
+          </Button>
           <Button onClick={open4}>알림4</Button>
-          <Button onClick={open5}>알림5</Button>
-          <Button onClick={open6}>알림6</Button>
+          <Button onClick={open5} variant="danger">
+            알림5
+          </Button>
+          <Button onClick={open6} variant="primary">
+            알림6
+          </Button>
           <Button onClick={open7}>알림7</Button>
         </Group>
       </Safari>
+
+      <h2 className="anchor">Center modal vertically</h2>
+      <Safari>
+        <Group justify="center">
+          <Button onClick={open8} variant="primary">
+            수직으로 가운데 정렬 모달
+          </Button>
+        </Group>
+      </Safari>
+
+      <h2 className="anchor">Remove header</h2>
+      <Safari>
+        <Group justify="center">
+          <Button onClick={open9} variant="danger">
+            모달 헤더 삭제
+          </Button>
+        </Group>
+      </Safari>
+
+      <h2 className="anchor">Fullscreen</h2>
+      <Safari>
+        <Group justify="center">
+          <Button onClick={open10}>화면 전체를 사용하는 모달</Button>
+        </Group>
+      </Safari>
+
+      <h2 className="anchor">Modal with scroll</h2>
+      <Safari>
+        <Group justify="center">
+          <Button onClick={open11} variant="primary">
+            스크롤을 가지고 있는 모달
+          </Button>
+        </Group>
+      </Safari>
+
       <Modal opened={opened1} onClose={close1} size={780}>
         <p
           style={{
@@ -72,7 +126,6 @@ export default function ModalPage() {
           </Flex>
         </div>
       </Modal>
-
       <Modal opened={opened3} onClose={close3} size={780}>
         <p
           style={{
@@ -106,7 +159,6 @@ export default function ModalPage() {
           </Flex>
         </div>
       </Modal>
-
       <Modal opened={opened4} onClose={close4} size={780}>
         <p
           style={{
@@ -131,7 +183,6 @@ export default function ModalPage() {
           </Flex>
         </div>
       </Modal>
-
       <Modal opened={opened5} onClose={close5} size={780}>
         <p
           style={{
@@ -155,7 +206,6 @@ export default function ModalPage() {
           </Flex>
         </div>
       </Modal>
-
       <Modal opened={opened6} onClose={close6} size={780}>
         <p
           style={{
@@ -179,7 +229,6 @@ export default function ModalPage() {
           </Flex>
         </div>
       </Modal>
-
       <Modal opened={opened7} onClose={close7} size={780}>
         <p
           style={{
@@ -203,6 +252,49 @@ export default function ModalPage() {
             </Button>
           </Flex>
         </div>
+      </Modal>
+
+      <Modal opened={centered} onClose={close8} size={780} centered>
+        <p
+          style={{
+            marginTop: "5px",
+            marginBottom: "25px",
+            fontSize: "24px",
+            lineHeight: 1,
+          }}
+        >
+          알림
+        </p>
+        <div style={{ color: "#717171", fontSize: "14px" }}>
+          선택한 서버가 %서버 동작% 불가 상태입니다.
+        </div>
+        <div style={{ marginTop: "20px" }}>
+          <Flex gap={10} justify="center">
+            <Button onClick={close8}>확인</Button>
+          </Flex>
+        </div>
+      </Modal>
+
+      <Modal opened={removeHeader} onClose={close9} withCloseButton={false}>
+        모달 헤더와 닫기 버튼을 삭제한다.
+      </Modal>
+
+      <Modal opened={fullscreen} onClose={close10} fullScreen>
+        Fullscreen 모드는 전체 화면을 차지합니다.
+      </Modal>
+
+      <Modal opened={withScroll} onClose={close11}>
+        <p
+          style={{
+            marginTop: "5px",
+            marginBottom: "25px",
+            fontSize: "24px",
+            lineHeight: 1,
+          }}
+        >
+          모달
+        </p>
+        {content}
       </Modal>
     </div>
   );
