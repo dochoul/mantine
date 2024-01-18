@@ -95,6 +95,18 @@ export default function SideBar() {
           />
         }
       />
+      <NavLink
+        href="/tooltip"
+        label="Tooltip"
+        leftSection={<IconGauge size="1rem" stroke={1.5} />}
+        rightSection={
+          <IconChevronRight
+            size="0.8rem"
+            stroke={1.5}
+            className="mantine-rotate-rtl"
+          />
+        }
+      />
     </div>
   );
 }

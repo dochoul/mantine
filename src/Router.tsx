@@ -9,6 +9,7 @@ import ModalPage from "./pages/Modal.page";
 import DatePickerPage from "./pages/DatePicker.page";
 import PaginationPage from "./pages/Pagination.page";
 import TabPage from "./pages/Tab.page";
+import TooltipPage from "./pages/Tooltip.page";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/tab",
     element: <TabPage />,
+  },
+  {
+    path: "/tooltip",
+    element: <TooltipPage />,
   },
   {
     path: "/datepicker",
