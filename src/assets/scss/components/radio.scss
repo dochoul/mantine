@@ -1,0 +1,26 @@
+.mantine-Radio-root {
+  .mantine-Radio-inner {
+    width: 14px;
+    height: 14px;
+    .mantine-Radio-radio {
+      width: 14px;
+      height: 14px;
+      &:checked {
+        --_radio-bg: #0076d5;
+        --_radio-bd-color: #0076d5;
+      }
+    }
+    .mantine-Radio-icon {
+      --_radio-icon-transform: scale(0.7);
+    }
+  }
+  .mantine-Radio-labelWrapper {
+    .mantine-Radio-label {
+      color: #666;
+      font-size: 12px;
+      padding-top: 2px;
+      padding-left: 5px;
+      line-height: 1;
+    }
+  }
+}

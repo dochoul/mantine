@@ -22,7 +22,6 @@
     "@mantine/core": "^7.4.0",
     "@mantine/hooks": "7.4.0",
     "@tabler/icons-react": "^2.45.0",
-    "gabia-design-system": "^0.2.2",
     "gutils": "^1.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -16,7 +16,7 @@ const initialValues = [
   },
 ];
 
-export default function About() {
+export default function CheckboxPage() {
   const [values, handlers] = useListState(initialValues);
 
   const allChecked = values.every((value) => value.checked);
@@ -24,10 +24,9 @@ export default function About() {
 
   const items = values.map((value, index) => (
     <Checkbox
-      size="xs"
       color="#0076d5"
       mt="xs"
-      ml={33}
+      ml={20}
       label={value.label}
       key={value.key}
       checked={value.checked}
@@ -43,7 +42,6 @@ export default function About() {
       <Safari>
         <Group justify="center">
           <Checkbox
-            size="xs"
             color="#0076d5"
             defaultChecked
             label="위 사항을 모두 확인하였으며, 이에 동의합니다."
@@ -55,14 +53,12 @@ export default function About() {
       <Safari>
         <Stack>
           <Checkbox
-            size="xs"
             color="#0076d5"
             checked={false}
             onChange={() => {}}
             label="Default checkbox"
           />
           <Checkbox
-            size="xs"
             color="#0076d5"
             checked={false}
             onChange={() => {}}
@@ -70,23 +66,19 @@ export default function About() {
             label="Indeterminate checkbox"
           />
           <Checkbox
-            size="xs"
             color="#0076d5"
             checked
             onChange={() => {}}
             label="Checked checkbox"
           />
 
-          <Checkbox size="xs" disabled label="Disabled checkbox" />
           <Checkbox
-            size="xs"
             color="#0076d5"
             disabled
             indeterminate
             label="Disabled indeterminate checkbox"
           />
           <Checkbox
-            size="xs"
             color="#0076d5"
             disabled
             checked
@@ -99,7 +91,6 @@ export default function About() {
       <h2 className="anchor">Indeterminate States</h2>
       <Safari>
         <Checkbox
-          size="xs"
           color="#0076d5"
           checked={allChecked}
           indeterminate={indeterminate}
@@ -116,7 +107,6 @@ export default function About() {
       <h2 className="anchor">Label with link</h2>
       <Safari>
         <Checkbox
-          size="xs"
           color="#0076d5"
           label={
             <>

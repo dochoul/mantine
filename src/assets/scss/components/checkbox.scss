@@ -1,16 +1,26 @@
 //* 체크박스와 텍스트 여백 조정
 .mantine-Checkbox-root {
-  .mantine-Checkbox-label {
-    padding-top: 3px;
-    padding-left: 5px;
-    line-height: 1;
-  }
-  .mantine-Checkbox-input {
-    border-radius: 0;
+  //* 체크박스 사이즈 설정(14 X 14)
+  .mantine-Checkbox-inner {
+    width: 14px;
+    height: 14px;
+    .mantine-Checkbox-input {
+      width: 14px;
+      height: 14px;
+      border-radius: 0;
+      &:checked {
+        --_checkbox-bg: #0076d5;
+        --_checkbox-bd-color: #0076d5;
+      }
+    }
   }
   .mantine-Checkbox-labelWrapper {
     .mantine-Checkbox-label {
       color: #666;
+      font-size: 12px;
+      padding-top: 2px;
+      padding-left: 5px;
+      line-height: 1;
     }
   }
 }

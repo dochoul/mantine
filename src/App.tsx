@@ -1,6 +1,6 @@
 import "@mantine/core/styles.css";
 import "./assets/scss/styles.scss";
-import { defaultCommonTheme } from "gabia-design-system";
+//import { defaultCommonTheme } from "gabia-design-system";
 import { MantineProvider, mergeThemeOverrides } from "@mantine/core";
 import { Router } from "./Router";
 import Header from "./components/layout/Header";

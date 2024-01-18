@@ -4,6 +4,7 @@ import AboutPage from "./pages/About.page";
 
 import ButtonPage from "./pages/Buttons.page";
 import CheckboxPage from "./pages/Checkbox.page";
+import RadioPage from "./pages/Radio.page";
 import ModalPage from "./pages/Modal.page";
 import DatePickerPage from "./pages/DatePicker.page";
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/checkbox",
     element: <CheckboxPage />,
+  },
+  {
+    path: "/radio",
+    element: <RadioPage />,
   },
   {
     path: "/modal",

@@ -37,7 +37,19 @@ export default function SideBar() {
       />
       <NavLink
         href="/checkbox"
-        label="checkbox"
+        label="Checkbox"
+        leftSection={<IconGauge size="1rem" stroke={1.5} />}
+        rightSection={
+          <IconChevronRight
+            size="0.8rem"
+            stroke={1.5}
+            className="mantine-rotate-rtl"
+          />
+        }
+      />
+      <NavLink
+        href="/radio"
+        label="Radio"
         leftSection={<IconGauge size="1rem" stroke={1.5} />}
         rightSection={
           <IconChevronRight
