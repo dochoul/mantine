@@ -8,6 +8,8 @@ import RadioPage from "./pages/Radio.page";
 import ModalPage from "./pages/Modal.page";
 import DatePickerPage from "./pages/DatePicker.page";
 import PaginationPage from "./pages/Pagination.page";
+import TabPage from "./pages/Tab.page";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/pagination",
     element: <PaginationPage />,
+  },
+  {
+    path: "/tab",
+    element: <TabPage />,
   },
   {
     path: "/datepicker",
