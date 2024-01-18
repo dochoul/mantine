@@ -1,5 +1,5 @@
 import { useDisclosure } from "@mantine/hooks";
-import { Modal, Button, Group, Flex, Box } from "@mantine/core";
+import { Modal, Button, Group, Flex, Box, TextInput } from "@mantine/core";
 import Safari from "../components/Safari";
 
 export default function ModalPage() {
@@ -17,6 +17,8 @@ export default function ModalPage() {
 
   const [fullscreen, { open: open10, close: close10 }] = useDisclosure(false);
   const [withScroll, { open: open11, close: close11 }] = useDisclosure(false);
+
+  const [initialFocus, { open: open12, close: close12 }] = useDisclosure(false);
 
   const content = Array(100)
     .fill(0)
@@ -75,6 +77,15 @@ export default function ModalPage() {
         <Group justify="center">
           <Button onClick={open11} variant="primary">
             스크롤을 가지고 있는 모달
+          </Button>
+        </Group>
+      </Safari>
+
+      <h2 className="anchor">Initial focus</h2>
+      <Safari>
+        <Group justify="center">
+          <Button onClick={open12} variant="primary">
+            자동 포커스
           </Button>
         </Group>
       </Safari>
@@ -295,6 +306,15 @@ export default function ModalPage() {
           모달
         </p>
         {content}
+      </Modal>
+
+      <Modal opened={initialFocus} onClose={close12}>
+        <Box ta="left" mt="25">
+          <Box mb="10">
+            <TextInput label="First input" placeholder="First input" />
+          </Box>
+          <TextInput data-autofocus label="Input with initial focus" />
+        </Box>
       </Modal>
     </div>
   );
