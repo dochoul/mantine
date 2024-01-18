@@ -3,7 +3,7 @@
   .mantine-Modal-inner {
     .mantine-Modal-header {
       position: absolute;
-      right: 25px;
+      right: 20px;
       top: 25px;
       padding: 0;
       min-height: 0;
@@ -23,7 +23,7 @@
 
     //* 적절한 패딩과 모달 박스 둥글게 처리
     .mantine-Modal-content {
-      padding: 40px 90px;
+      padding: 40px 25px;
       text-align: center;
       border-radius: 6px;
       .mantine-Modal-body {

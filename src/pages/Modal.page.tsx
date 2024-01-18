@@ -93,7 +93,6 @@ export default function ModalPage() {
       <Modal opened={opened1} onClose={close1} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -113,7 +112,6 @@ export default function ModalPage() {
       <Modal opened={opened2} onClose={close2} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -140,7 +138,6 @@ export default function ModalPage() {
       <Modal opened={opened3} onClose={close3} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -173,7 +170,6 @@ export default function ModalPage() {
       <Modal opened={opened4} onClose={close4} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -197,7 +193,6 @@ export default function ModalPage() {
       <Modal opened={opened5} onClose={close5} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -220,7 +215,6 @@ export default function ModalPage() {
       <Modal opened={opened6} onClose={close6} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -243,7 +237,6 @@ export default function ModalPage() {
       <Modal opened={opened7} onClose={close7} size={780}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -268,7 +261,6 @@ export default function ModalPage() {
       <Modal opened={centered} onClose={close8} size={780} centered>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -297,7 +289,6 @@ export default function ModalPage() {
       <Modal opened={withScroll} onClose={close11}>
         <p
           style={{
-            marginTop: "5px",
             marginBottom: "25px",
             fontSize: "24px",
             lineHeight: 1,
@@ -309,7 +300,16 @@ export default function ModalPage() {
       </Modal>
 
       <Modal opened={initialFocus} onClose={close12}>
-        <Box ta="left" mt="25">
+        <p
+          style={{
+            marginBottom: "25px",
+            fontSize: "24px",
+            lineHeight: 1,
+          }}
+        >
+          모달
+        </p>
+        <Box ta="left">
           <Box mb="10">
             <TextInput label="First input" placeholder="First input" />
           </Box>
