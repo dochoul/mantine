@@ -7,7 +7,7 @@ import CheckboxPage from "./pages/Checkbox.page";
 import RadioPage from "./pages/Radio.page";
 import ModalPage from "./pages/Modal.page";
 import DatePickerPage from "./pages/DatePicker.page";
-
+import PaginationPage from "./pages/Pagination.page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/modal",
     element: <ModalPage />,
+  },
+  {
+    path: "/pagination",
+    element: <PaginationPage />,
   },
   {
     path: "/datepicker",

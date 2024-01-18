@@ -1,4 +1,3 @@
-import React from "react";
 import Safari from "../components/Safari";
 import { Button, ActionIcon, Group } from "@mantine/core";
 
