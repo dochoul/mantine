@@ -19,10 +19,9 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@mantine/core": "^7.4.0",
-    "@mantine/hooks": "7.4.0",
-    "@tabler/icons-react": "^2.45.0",
-    "gutils": "^1.2.6",
+    "@mantine/core": "7.4.2",
+    "@mantine/hooks": "7.4.2",
+    "@tabler/icons-react": "^2.46.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0",
@@ -69,6 +68,5 @@
     "vite": "^5.0.10",
     "vite-tsconfig-paths": "^4.2.2",
     "vitest": "^1.1.0"
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }

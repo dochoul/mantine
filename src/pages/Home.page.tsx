@@ -14,7 +14,7 @@ import {
 } from "@mantine/core";
 import { IconPhoto, IconDownload, IconArrowRight } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
-import { formatDate, isEmail } from "Gutils";
+//import { formatDate, isEmail } from "Gutils";
 import Safari from "../components/Safari";
 
 export default function HomePage() {
@@ -22,18 +22,18 @@ export default function HomePage() {
   const [today, setToday] = useState("");
   const [checked, setChecked] = useState(false);
 
-  useEffect(() => {
-    setToday(formatDate({ format: "yyyy-mm-dd" }));
-  }, []);
+  // useEffect(() => {
+  //   setToday(formatDate({ format: "yyyy-mm-dd" }));
+  // }, []);
 
-  console.log(isEmail("111@naver.com"));
+  // console.log(isEmail("111@naver.com"));
 
   return (
     <div>
-      <h2 className="anchor">Gutils</h2>
+      {/* <h2 className="anchor">Gutils</h2>
       <Safari>
         오늘 날짜: <span style={{ color: "red" }}>{today}</span>
-      </Safari>
+      </Safari> */}
 
       <h2 className="anchor">Tooltip</h2>
       <Safari>

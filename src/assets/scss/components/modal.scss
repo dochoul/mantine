@@ -1,32 +1,39 @@
 //* 클라우드 모달은 타이틀 영역이 애매한 위치에 자리잡고 있어 header에 닫기 버튼만 남긴 후 absolute 속성으로 위치를 정해주었다.
-.mantine-Modal-header {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  padding: 0;
-  min-height: 0;
-  .mantine-Modal-close {
-    color: #888;
-    transition: color 0.15s ease-in-out;
-    > svg {
-      width: 85% !important;
-      height: 85% !important;
+.mantine-Modal-root {
+  .mantine-Modal-inner {
+    .mantine-Modal-header {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      padding: 0;
+      min-height: 0;
+      .mantine-Modal-close {
+        color: #888;
+        transition: color 0.15s ease-in-out;
+        > svg {
+          width: 85% !important;
+          height: 85% !important;
+        }
+        &:hover {
+          color: #333;
+          background-color: transparent;
+        }
+      }
     }
-    &:hover {
-      color: #333;
-      background-color: transparent;
+
+    //* 적절한 패딩과 모달 박스 둥글게 처리
+    .mantine-Modal-content {
+      padding: 40px 25px;
+      text-align: center;
+      border-radius: 6px;
+      .mantine-Modal-body {
+        padding: 0;
+      }
     }
   }
-}
 
-//* 적절한 패딩과 모달 박스 둥글게 처리
-.mantine-Modal-content {
-  padding: 30px 90px;
-  text-align: center;
-  border-radius: 6px;
-}
-
-//* Overlay 색상 변경
-.mantine-Modal-overlay {
-  background-color: rgba(60, 60, 60, 0.5);
+  //* Overlay 색상 변경
+  .mantine-Modal-overlay {
+    background-color: rgba(60, 60, 60, 0.5);
+  }
 }
