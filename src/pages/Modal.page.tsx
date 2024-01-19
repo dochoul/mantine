@@ -307,7 +307,7 @@ export default function ModalPage() {
             lineHeight: 1,
           }}
         >
-          모달
+          알림
         </p>
         <Box ta="left">
           <Box mb="10">
