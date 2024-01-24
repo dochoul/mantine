@@ -1,22 +1,21 @@
-import Safari from "../components/Safari";
 import { Button, ActionIcon, Group } from "@mantine/core";
+import Playground from "@/components/Playground";
 
 export default function Buttons() {
   return (
-    <div>
-      <h2 className="anchor">Usage</h2>
-      <Safari>
-        <Group justify="center">
+    <>
+      <Playground title="Usage">
+        <Group>
           <Button>Button</Button>
           <Button>클라우드</Button>
           <Button>블록 스토리지 새로 추가하기</Button>
           <Button variant="primary">Primary 버튼</Button>
           <Button variant="danger">Danger 버튼</Button>
         </Group>
-      </Safari>
-      <h2 className="anchor">Icon Button</h2>
-      <Safari>
-        <Group justify="center">
+      </Playground>
+
+      <Playground title="Icon Button">
+        <Group>
           <Button
             leftSection={<i className="fa-regular fa-heart" />}
             variant="default"
@@ -36,10 +35,10 @@ export default function Buttons() {
             서버 추가하기
           </Button>
         </Group>
-      </Safari>
-      <h2 className="anchor">Compact size</h2>
-      <Safari>
-        <Group justify="center">
+      </Playground>
+
+      <Playground title="Compact size">
+        <Group>
           <Button size="sm">연결하기</Button>
           <Button>기본 버튼</Button>
           <Button size="lg">모니터링 솔루션 신청하기</Button>
@@ -51,10 +50,10 @@ export default function Buttons() {
             모니터링 솔루션 신청하기
           </Button>
         </Group>
-      </Safari>
-      <h2 className="anchor">Disabled state</h2>
-      <Safari>
-        <Group justify="center">
+      </Playground>
+
+      <Playground title="Disabled state">
+        <Group>
           <Button disabled>Disabled</Button>
           <Button variant="primary" disabled>
             Disabled
@@ -63,10 +62,10 @@ export default function Buttons() {
             Disabled
           </Button>
         </Group>
-      </Safari>
-      <h2 className="anchor">ActionIcon</h2>
-      <Safari>
-        <Group justify="center">
+      </Playground>
+
+      <Playground title="ActionIcon">
+        <Group>
           <ActionIcon
             size={32}
             variant="default"
@@ -89,11 +88,10 @@ export default function Buttons() {
             <i className="fa-light fa-print" />
           </ActionIcon>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Loading state</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Loading state">
+        <Group>
           <Button loading={true}>Filled button</Button>
           <Button variant="primary" loading={true}>
             Light button
@@ -105,7 +103,7 @@ export default function Buttons() {
             Loading button
           </Button>
         </Group>
-      </Safari>
-    </div>
+      </Playground>
+    </>
   );
 }

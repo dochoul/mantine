@@ -1,7 +1,6 @@
 import { Anchor, Checkbox, Group, Stack } from "@mantine/core";
-import Safari from "../components/Safari";
-import { useState } from "react";
 import { randomId, useListState } from "@mantine/hooks";
+import Playground from "@/components/Playground";
 
 const initialValues = [
   {
@@ -37,20 +36,18 @@ export default function CheckboxPage() {
   ));
 
   return (
-    <div>
-      <h2 className="anchor">Checkbox</h2>
-      <Safari>
-        <Group justify="center">
+    <>
+      <Playground title="Checkbox">
+        <Group>
           <Checkbox
             color="#0076d5"
             defaultChecked
             label="위 사항을 모두 확인하였으며, 이에 동의합니다."
           />
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">States</h2>
-      <Safari>
+      <Playground title="States">
         <Stack>
           <Checkbox
             color="#0076d5"
@@ -86,10 +83,9 @@ export default function CheckboxPage() {
             label="Disabled checked checkbox"
           />
         </Stack>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Indeterminate States</h2>
-      <Safari>
+      <Playground title="Indeterminate States">
         <Checkbox
           color="#0076d5"
           checked={allChecked}
@@ -102,10 +98,9 @@ export default function CheckboxPage() {
           }
         />
         {items}
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Label with link</h2>
-      <Safari>
+      <Playground title="Label with link">
         <Checkbox
           color="#0076d5"
           label={
@@ -122,7 +117,7 @@ export default function CheckboxPage() {
             </>
           }
         />
-      </Safari>
-    </div>
+      </Playground>
+    </>
   );
 }

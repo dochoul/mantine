@@ -1,13 +1,12 @@
 import { Group, Pagination } from "@mantine/core";
-import Safari from "../components/Safari";
+import Playground from "@/components/Playground";
 
 export default function PaginationPage() {
   return (
     <div>
-      <h2 className="anchor">Usage</h2>
-      <Safari>
+      <Playground title="Usage">
         <Pagination.Root total={100}>
-          <Group gap={5} justify="center">
+          <Group gap={10}>
             <Pagination.First />
             <Pagination.Previous />
             <Pagination.Items />
@@ -15,7 +14,7 @@ export default function PaginationPage() {
             <Pagination.Last />
           </Group>
         </Pagination.Root>{" "}
-      </Safari>
+      </Playground>
     </div>
   );
 }

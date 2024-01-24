@@ -4,15 +4,14 @@ import {
   IconMessageCircle,
   IconSettings,
 } from "@tabler/icons-react";
-import Safari from "../components/Safari";
+import Playground from "@/components/Playground";
 
 export default function TabPage() {
   const iconStyle = { width: rem(12), height: rem(12) };
 
   return (
     <div>
-      <h2 className="anchor">Usage</h2>
-      <Safari>
+      <Playground title="Usage">
         <Tabs defaultValue="gallery">
           <Tabs.List>
             <Tabs.Tab
@@ -41,7 +40,7 @@ export default function TabPage() {
 
           <Tabs.Panel value="settings">Settings tab content</Tabs.Panel>
         </Tabs>
-      </Safari>
+      </Playground>
     </div>
   );
 }

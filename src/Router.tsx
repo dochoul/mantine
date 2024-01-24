@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home.page";
 import AboutPage from "./pages/About.page";
-
 import ButtonPage from "./pages/Buttons.page";
 import CheckboxPage from "./pages/Checkbox.page";
 import RadioPage from "./pages/Radio.page";
@@ -13,43 +12,43 @@ import TooltipPage from "./pages/Tooltip.page";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/guide",
     element: <HomePage />,
   },
   {
-    path: "/button",
+    path: "/guide/button",
     element: <ButtonPage />,
   },
   {
-    path: "/about",
+    path: "/guide/about",
     element: <AboutPage />,
   },
   {
-    path: "/checkbox",
+    path: "/guide/checkbox",
     element: <CheckboxPage />,
   },
   {
-    path: "/radio",
+    path: "/guide/radio",
     element: <RadioPage />,
   },
   {
-    path: "/modal",
+    path: "/guide/modal",
     element: <ModalPage />,
   },
   {
-    path: "/pagination",
+    path: "/guide/pagination",
     element: <PaginationPage />,
   },
   {
-    path: "/tab",
+    path: "/guide/tab",
     element: <TabPage />,
   },
   {
-    path: "/tooltip",
+    path: "/guide/tooltip",
     element: <TooltipPage />,
   },
   {
-    path: "/datepicker",
+    path: "/guide/datepicker",
     element: <DatePickerPage />,
   },
 ]);

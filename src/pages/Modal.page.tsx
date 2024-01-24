@@ -1,6 +1,6 @@
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, Button, Group, Flex, Box, TextInput } from "@mantine/core";
-import Safari from "../components/Safari";
+import Playground from "@/components/Playground";
 
 export default function ModalPage() {
   const [opened1, { open: open1, close: close1 }] = useDisclosure(false);
@@ -26,9 +26,8 @@ export default function ModalPage() {
 
   return (
     <div>
-      <h2 className="anchor">Usage</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Usage">
+        <Group>
           <Button onClick={open1}>알림1</Button>
           <Button onClick={open2} variant="danger">
             알림2
@@ -45,50 +44,45 @@ export default function ModalPage() {
           </Button>
           <Button onClick={open7}>알림7</Button>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Center modal vertically</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Center modal vertically">
+        <Group>
           <Button onClick={open8} variant="primary">
             수직으로 가운데 정렬 모달
           </Button>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Remove header</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Remove header">
+        <Group>
           <Button onClick={open9} variant="danger">
             모달 헤더 삭제
           </Button>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Fullscreen</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Fullscreen">
+        <Group>
           <Button onClick={open10}>화면 전체를 사용하는 모달</Button>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Modal with scroll</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Modal with scroll">
+        <Group>
           <Button onClick={open11} variant="primary">
             스크롤을 가지고 있는 모달
           </Button>
         </Group>
-      </Safari>
+      </Playground>
 
-      <h2 className="anchor">Initial focus</h2>
-      <Safari>
-        <Group justify="center">
+      <Playground title="Initial focus">
+        <Group>
           <Button onClick={open12} variant="primary">
             자동 포커스
           </Button>
         </Group>
-      </Safari>
+      </Playground>
 
       <Modal opened={opened1} onClose={close1} size={780}>
         <p

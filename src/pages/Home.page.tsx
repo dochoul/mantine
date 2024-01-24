@@ -15,7 +15,6 @@ import {
 import { IconPhoto, IconDownload, IconArrowRight } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 //import { formatDate, isEmail } from "Gutils";
-import Safari from "../components/Safari";
 
 export default function HomePage() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -30,12 +29,13 @@ export default function HomePage() {
 
   return (
     <div>
+      <h2>Cloud-Design-System</h2>
       {/* <h2 className="anchor">Gutils</h2>
       <Safari>
         오늘 날짜: <span style={{ color: "red" }}>{today}</span>
       </Safari> */}
 
-      <h2 className="anchor">Tooltip</h2>
+      {/* <h2 className="anchor">Tooltip</h2>
       <Safari>
         <Group>
           <Tooltip label="Default arrow">
@@ -154,7 +154,7 @@ export default function HomePage() {
           <p className="font-weight-bold">gabia</p>
           <p className="font-weight-bold">가비아</p>
         </Group>
-      </Safari>
+      </Safari> */}
     </div>
   );
 }

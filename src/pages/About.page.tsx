@@ -1,7 +1,7 @@
 import { Anchor, Checkbox, Group, Stack } from "@mantine/core";
-import Safari from "../components/Safari";
 import { useState } from "react";
 import { randomId, useListState } from "@mantine/hooks";
+import Playground from "@/components/Playground";
 
 const initialValues = [
   {
@@ -40,14 +40,14 @@ export default function About() {
   return (
     <div>
       <h2 className="anchor">Checkbox</h2>
-      <Safari>
+      <Playground title="ddddddd">
         <Group justify="center">
           <Checkbox defaultChecked label="체크박스입니다" />
         </Group>
-      </Safari>
+      </Playground>
 
       <h2 className="anchor">States</h2>
-      <Safari>
+      <Playground title="ddddddd">
         <Stack>
           <Checkbox
             checked={false}
@@ -75,10 +75,10 @@ export default function About() {
             label="Disabled checked checkbox"
           />
         </Stack>
-      </Safari>
+      </Playground>
 
       <h2 className="anchor">Indeterminate States</h2>
-      <Safari>
+      <Playground title="ddddddd">
         <Checkbox
           checked={allChecked}
           indeterminate={indeterminate}
@@ -90,10 +90,10 @@ export default function About() {
           }
         />
         {items}
-      </Safari>
+      </Playground>
 
       <h2 className="anchor">Label with link</h2>
-      <Safari>
+      <Playground title="ddddddd">
         <Checkbox
           label={
             <>
@@ -109,7 +109,7 @@ export default function About() {
             </>
           }
         />
-      </Safari>
+      </Playground>
     </div>
   );
 }
