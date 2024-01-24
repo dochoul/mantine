@@ -16,10 +16,10 @@ import { IconHome2, IconGauge, IconChevronRight } from "@tabler/icons-react";
 
 import commonTheme from "./theme/common.theme";
 
-import { defaultCommonTheme } from "gabia-design-system";
+//import { defaultCommonTheme } from "gabia-design-system";
 import { useEffect, useState } from "react";
 
-const theme = mergeThemeOverrides(defaultCommonTheme, commonTheme);
+//const theme = mergeThemeOverrides(defaultCommonTheme, commonTheme);
 
 export default function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -30,7 +30,7 @@ export default function App() {
   }, []);
 
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider>
       <AppShell
         header={{ height: 60 }}
         navbar={{
